@@ -197,6 +197,6 @@ class Ingredient
 
 end
 
-test = Spoonacular.new
+# test = Spoonacular.new
 # puts test.search_by_ingredient("apples,bacon", {number: 2, ranking: 1, ignorePantry: true})
-#puts test.search_by_recipe(716429, true)
+# puts test.search_by_recipe(716429, true)

@@ -12,9 +12,9 @@ get("/ingredients") do
   erb(:ingredients)
 end
 
-get("/ingredients/results") do
-  ingredients = params[:ingredients]
-  number = "2"
+get("/ingredients/results/") do
+  ingredients = params[:ingredients].gsub(", ", ",+")
+  number = "10"
   ranking = params[:ranking]
   ignorePantry = "true"
   @results = spoon.search_by_ingredient(ingredients, {number: number, ranking: ranking, ignorePantry: ignorePantry})

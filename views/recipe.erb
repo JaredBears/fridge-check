@@ -1,0 +1,16 @@
+<h2><%= @recipe.title %></h2>
+<img src="<%= @recipe.image %>" alt="<%= @recipe.title %>">
+<div class="ingredients">
+  <h3>Ingredients</h3>
+  <ul>
+    <% for ingredient in @recipe.extendedIngredients %>
+      <li><%= ingredient.original %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="recipe-info">
+<p>Serves <%= @recipe.servings %> people.</p>
+<p>This dish by <a href="<%= @recipe.sourceUrl %>" target="_blank"><%= @recipe.sourceName %></a> is a perfect <%= @recipe.dishTypes.sample %> and pairs well with <%= @recipe.winePairing["pairedWines"].sample %>.</p>
+<p>This meal costs approximately $<%= (@recipe.pricePerServing.to_i / 100.0).round(2) %> per serving and takes <%= @recipe.readyInMinutes %> minutes to prepare.</p>
+<p>For full details, visit <a href="<%= @recipe.spoonacularSourceUrl %>" target="_blank">Spoonacular</a>.</p>
+</div>

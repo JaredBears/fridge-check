@@ -1,11 +1,19 @@
-<h2>Search by Ingredient</h2>
-<!-- A form that will allow the users to input a list of comma-seperated ingredients
-and return a list of recipes that include all of the ingredients 
-The form includes options for maximizing including ingredients (Pre-Shopping), or minimizing missing ingredients (Post-Shopping)-->
-<form action="/ingredients" method="post">
-  <label for="ingredients">Ingredients:</label>
-  <input type="text" id="ingredients" name="ingredients" placeholder="Enter ingredients here">
-  <input type="radio" id="pre" name="ranking" value="1">Pre-Shopping
-  <input type="radio" id="post" name="ranking" value="2">Post-Shopping
-  <input type="submit" value="Submit">
-</form>
+<h2>Search by Ingredient</h2
+<div class="form">
+  <form action="/ingredients/results/">
+    <label for="ingredients">Ingredients:</label>
+    <input type="text" id="ingredients" name="ingredients" placeholder="Enter ingredients here">
+    <input type="radio" id="pre" name="ranking" value="1"><label for="pre">Pre-Shopping</label>
+    <input type="radio" id="post" name="ranking" value="2"><label for="post">Post-Shopping</label>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+<div class="instructions">
+  <p>Enter ingredients separated by commas. For example: "chicken, rice, broccoli".</p>
+  <p>Choose "Pre-Shopping" if you want to find recipes that will maximize the use of ingredients you already have.</p>
+  <p>Choose "Post-Shopping" if you want to find recipes that will minimize the number of ingredients you need to buy.</p>
+  <p>The tool assumes you have common pantry items such as flour, salt, pepper, etc. </p>
+  <p>For best results, enter at least 3 ingredients.</p>
+  <p>The tool will return up to 10 results</p>
+  <p>Bon appetit!</p>
+</div>
