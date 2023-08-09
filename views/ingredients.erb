@@ -1,0 +1,11 @@
+<h2>Search by Ingredient</h2>
+<!-- A form that will allow the users to input a list of comma-seperated ingredients
+and return a list of recipes that include all of the ingredients 
+The form includes options for maximizing including ingredients (Pre-Shopping), or minimizing missing ingredients (Post-Shopping)-->
+<form action="/ingredients" method="post">
+  <label for="ingredients">Ingredients:</label>
+  <input type="text" id="ingredients" name="ingredients" placeholder="Enter ingredients here">
+  <input type="radio" id="pre" name="ranking" value="1">Pre-Shopping
+  <input type="radio" id="post" name="ranking" value="2">Post-Shopping
+  <input type="submit" value="Submit">
+</form>

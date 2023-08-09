@@ -5,5 +5,25 @@ require_relative "spoonacular"
 spoon = Spoonacular.new
 
 get("/") do
-  erb(:index)
+  redirect to("/ingredients")
+end
+
+get("/ingredients") do
+  erb(:ingredients)
+end
+
+get("/ingredients/results") do
+  ingredients = params[:ingredients]
+  number = "2"
+  ranking = params[:ranking]
+  ignorePantry = "true"
+  @results = spoon.search_by_ingredient(ingredients, {number: number, ranking: ranking, ignorePantry: ignorePantry})
+  erb(:results)
+end
+
+get("/recipes/:id") do
+  id = params[:id]
+  includeNutrition = "false"
+  @recipe = spoon.search_by_recipe(id, includeNutrition)
+  erb(:recipe)
 end
