@@ -1,0 +1,12 @@
+body {
+  background-color: RGB(248, 247, 255);
+}
+
+header {
+  background-color: RGB(147, 129, 255);
+  color: RGB(255, 216, 190);
+}
+
+header a {
+  color: RGB(248, 247, 255);
+}

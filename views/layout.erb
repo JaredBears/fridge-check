@@ -1,12 +1,69 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sinatra Template</title>
+    <title>Bearish Recipe Search</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <style>
+      body {
+        background-color: RGB(248, 247, 255);
+      }
+
+      header {
+        background-color: RGB(147, 129, 255);
+        color: RGB(0, 0, 0);
+        margin: 0 auto;
+        padding: 0.5em;
+        text-align: center;
+        height: 150px;
+        width: 90%;
+      }
+
+      header a {
+        color: RGB(248, 247, 255);
+      }
+
+      body {
+        font-family: sans-serif;
+        margin: 0 auto;
+        padding: 0;
+        color: RGB(0, 0, 0);
+        width: 75%;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      form {
+        margin: 0 auto;
+        width: 50%;
+        text-align: center;
+        flex-direction: column;
+      }
+      form input, label {
+        margin: 0.5em;
+      }
+
+      .instructions {
+        margin: 0 auto;
+        width: 75%;
+        text-align: left;
+      }
+
+      .result {
+        border: 1px solid RGB(147, 129, 255);
+        border-radius: 5px;
+        margin: 10px auto;
+        padding: 0.5em;
+      }
+
+    </style>
   </head>
 
   <body>
+    <header>
+      <h1>Bearish Recipe Search</h1>
     <%= yield %>
   </body>
 </html>

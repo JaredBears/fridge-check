@@ -1,19 +1,23 @@
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="javascript:history.back()">Go Back</a></li>
+    </ul>
+</header>
 <% counter = 1 %>
 <% for result in @results %>
   <div class="result">
 
-    <img src="<%= result.image %>" alt="<%= result.title %>">
-    <h3><%= counter %><a href="/recipes/<%= result.id %>"><%= result.title %></a></h3>
-    <span id="usedIngredientCount"><%= result.usedIngredientCount %> ingredients used</span>
-    <span id="usedIngredientCount">
-    <span id="usedIngredients">
+    <img src="<%= result.image %>" alt="<%= result.title %>" height="150px" width="150px">
+    <h3><%= counter %>. <a href="/recipes/<%= result.id %>"><%= result.title %></a></h3>
+    <span class="usedIngredients"><%= result.usedIngredientCount %> ingredients used</span>
       <ul>
       <% for ingredient in result.usedIngredients %>
         <li><%= ingredient.name %></li>
       <% end %>
       </ul>
     </span>
-    <span id="missedIngredientCount">
+    <span class="missedIngredients">
       <% if result.missedIngredientCount == 0 %>
         You have all the ingredients!
       <% else %>
@@ -25,7 +29,7 @@
         </ul>
       <% end %>
       </span>
-    <span id="likes"><%= result.likes %> likes</span>
+    <span class="likes"><%= result.likes %> likes</span>
   </div>
   <% counter += 1 %>
 <% end %>
